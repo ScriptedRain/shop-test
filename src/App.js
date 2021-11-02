@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import Shop from "./pages/Shop";
+import { Redirect } from "react-router";
 
 function App() {
   return (
@@ -14,12 +14,8 @@ function App() {
         <Route path="/shop">
           <Shop />
         </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/signup">
-          <SignUp />
-        </Route>
+        {/* <Route path="/login">{user ? <Redirect to="/" /> : <SignUp />}</Route>
+        <Route path="/signup">{user ? <Redirect to="/" /> : <SignUp />}</Route> */}
       </Switch>
     </Router>
   );
