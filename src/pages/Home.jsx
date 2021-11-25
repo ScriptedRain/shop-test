@@ -4,8 +4,8 @@ import AlgoliaInstantSearch from "../Components/AlgoliaInstantSearch";
 const Home = () => {
   return (
     <div>
-      <Navbar></Navbar>
-      {/* <AlgoliaInstantSearch /> */}
+      <Navbar />
+      <AlgoliaInstantSearch />
     </div>
   );
 };
