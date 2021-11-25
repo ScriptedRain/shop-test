@@ -1,7 +1,7 @@
 import { Button1, Button2 } from "./Buttons";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ currentPage }) => {
+const Navbar = ({ currentPageShop }) => {
   return (
     <div className="">
       <div className="grid grid-cols-12 gap-4 pt-4 row-span-2 grid-rows-1 pb-3 bg-gray-800">
@@ -25,7 +25,11 @@ const Navbar = ({ currentPage }) => {
           </div>
           <div>
             <Link to="/team">
-              {currentPage ? <Button2 name="Team" /> : <Button1 name="Team" />}
+              {currentPageShop ? (
+                <Button2 name="Team" />
+              ) : (
+                <Button1 name="Team" />
+              )}
             </Link>
           </div>
         </div>
