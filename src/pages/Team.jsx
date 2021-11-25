@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
+import NavbarMenu from "../Components/NavbarMenu";
 
 const Shop = () => {
   return (
     <div>
-      <Navbar currentPage="true" />
-      this is shop
+      <NavbarMenu isCurrent="team" />
+      this is team
     </div>
   );
 };

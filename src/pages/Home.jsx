@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
+      this is home lol
     </div>
   );
 };

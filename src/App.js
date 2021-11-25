@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import SignUp from "./Components/SignUp";
 import Shop from "./pages/Shop";
 import { Redirect } from "react-router";
-
+import Team from "./pages/Team";
 function App() {
   return (
     <Router>
@@ -13,6 +13,9 @@ function App() {
         </Route>
         <Route path="/shop">
           <Shop />
+        </Route>
+        <Route path="/team">
+          <Team />
         </Route>
         {/* <Route path="/login">{user ? <Redirect to="/" /> : <SignUp />}</Route>
         <Route path="/signup">{user ? <Redirect to="/" /> : <SignUp />}</Route> */}
