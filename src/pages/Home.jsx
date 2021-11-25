@@ -1,11 +1,11 @@
 import Navbar from "../Components/Navbar";
-import { Button1, Button2 } from "../Components/Buttons";
+import AlgoliaInstantSearch from "../Components/AlgoliaInstantSearch";
 
 const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
-      asdasdas
+      {/* <AlgoliaInstantSearch /> */}
     </div>
   );
 };
