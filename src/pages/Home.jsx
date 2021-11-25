@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
-      this is home lol
+      why r u gay haylee
     </div>
   );
 };
