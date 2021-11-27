@@ -4,6 +4,7 @@ import SignUp from "./Components/SignUp";
 import Shop from "./pages/Shop";
 import { Redirect } from "react-router";
 import Team from "./pages/Team";
+
 function App() {
   return (
     <Router>
