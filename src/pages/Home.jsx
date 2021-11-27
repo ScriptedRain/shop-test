@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Navbar from '../Components/Navbar'
 import { db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
-
+import Card from '../Components/Card'
 const Home = () => {
   const [users, setUsers] = useState([])
   const usersCollectionRef = collection(db, 'testUsers')
@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const getUsers = async () => {
       const data = await getDocs(usersCollectionRef)
-      setUsers(data.docs.map((doc) => ({ ...doc.data, id: doc.id })))
+      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       console.log(users)
     }
     getUsers()
@@ -22,8 +22,13 @@ const Home = () => {
       {users.map((users) => {
         return (
           <div>
-            <h1>Name: {users.name}</h1>
-            <h1>id: {users.id}</h1>
+            <Card
+              name={users.name}
+              desc={users.id}
+              img={
+                'https://www.topgear.com/sites/default/files/cars-car/image/2020/07/dsc09285.jpg'
+              }
+            />
           </div>
         )
       })}
