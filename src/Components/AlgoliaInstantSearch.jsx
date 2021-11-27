@@ -1,18 +1,20 @@
-import algoliasearch from "algoliasearch/lite";
-import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import algoliasearch from 'algoliasearch'
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 
 const searchClient = algoliasearch(
-  "KR2MJYJXFY",
-  "305635d41cc1e7781ec2842466e9d413"
-);
+  'KR2MJYJXFY',
+  'fe09bac9s14e710ebc8d1c4ee28ad45cb'
+)
 
 const AlgoliaInstantSearch = () => {
   return (
-    <InstantSearch searchClient={searchClient} indexName="demo_ecommerce">
-      <SearchBox />
-      <Hits />
-    </InstantSearch>
-  );
-};
+    <div>
+      <InstantSearch searchClient={searchClient} indexName='demo_ecommerce'>
+        <SearchBox />
+        <Hits />
+      </InstantSearch>
+    </div>
+  )
+}
 
-export default AlgoliaInstantSearch;
+export default AlgoliaInstantSearch
