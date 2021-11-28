@@ -1,5 +1,8 @@
 import React from 'react'
 import Card from './Card'
+import { useState, useEffect} from 'react'
+import { db } from '../Firebase'
+import { collection, getDocs } from 'firebase/firestore'
 
 const ShopWindow = ({ name, desc, price, img }) => {
   const [users, setUsers] = useState([])

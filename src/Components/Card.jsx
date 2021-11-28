@@ -1,4 +1,8 @@
 import Link from 'react-router-dom'
+import { useState, useEffect} from 'react'
+import { db } from '../Firebase'
+import { collection, getDocs } from 'firebase/firestore'
+
 
 const Card = ({ name, desc, tags, price, img }) => {
   const [users, setUsers] = useState([])
