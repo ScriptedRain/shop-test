@@ -1,13 +1,14 @@
-import React from "react";
-import Navbar from "../Components/Navbar";
+import React from 'react'
+import Navbar from '../Components/Navbar'
+import ShopWindow from '../Components/ShopWindow'
 
 const Shop = () => {
   return (
     <div>
-      <Navbar currentPage="true" />
-      this is shop
+      <Navbar currentPage='true' />
+      <ShopWindow />
     </div>
-  );
-};
+  )
+}
 
-export default Shop;
+export default Shop
