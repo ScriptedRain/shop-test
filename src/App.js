@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Shop from './pages/Shop'
 // import { Redirect } from "react-router";
 import Team from './pages/Team'
-import Login from './Components/Login'
 
 function App() {
   return (
@@ -18,9 +17,6 @@ function App() {
         </Route>
         <Route path='/team'>
           <Team />
-        </Route>
-        <Route path='/login'>
-          <Login />
         </Route>
         {/* <Route path="/login">{user ? <Redirect to="/" /> : <SignUp />}</Route>
         <Route path="/signup">{user ? <Redirect to="/" /> : <SignUp />}</Route> */}

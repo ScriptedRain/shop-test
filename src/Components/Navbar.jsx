@@ -45,7 +45,7 @@ const Navbar = ({ currentPageShop }) => {
           </div>
         </div>
         <div className="col-start-10 col-span-1">
-            <button onClick={signInWithGoogle} className='px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-700 rounded-md hover:bg-indigo-500 hover:scale-105 hover: focus:ring-indigo-300 focus:ring-opacity-80'>Sign in with Google</button>
+            <button onClick={signInWithGoogle} className='whitespace-nowrap ml-36 px-4 py-2 font-medium tracking-wide text-white transition-colors duration-200 bg-indigo-700 rounded-md hover:bg-indigo-500 hover:scale-105 hover: focus:ring-indigo-300 focus:ring-opacity-80'>Sign in with Google</button>
         </div>
       </div>
     </div>
