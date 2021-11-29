@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
 
+
 const ShopWindow = ({ name, desc, price, img }) => {
   const [users, setUsers] = useState([])
   const usersCollectionRef = collection(db, 'testUsers')
@@ -71,7 +72,7 @@ const ShopWindow = ({ name, desc, price, img }) => {
               </div>
             )
           })}
-          <Card name='Create New Card' img='../eeee.png' />
+          <Card name='Create New Card' img='https://seekicon.com/free-icon-download/plus-square_2.svg'/>
         </div>
       </body>
     </div>
