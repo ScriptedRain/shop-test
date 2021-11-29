@@ -1,8 +1,7 @@
 import Link from 'react-router-dom'
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
-
 
 const Card = ({ name, desc, tags, price, img }) => {
   const [users, setUsers] = useState([])
@@ -41,9 +40,11 @@ const Card = ({ name, desc, tags, price, img }) => {
             </span>
           </a>
         </div>
-        <span class='flex items-center h-8 bg-indigo-200 text-indigo-600 text-sm px-2 rounded'>
-          {price ? price : '$price'}
-        </span>
+        {price ? (
+          <span class='flex items-center h-8 bg-indigo-200 text-indigo-600 text-sm px-2 rounded'>
+            {price ? price : '$price'}
+          </span>
+        ) : null}
       </div>
     </div>
   )
