@@ -8,13 +8,6 @@ const Login = () => {
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider()
     signInWithPopup(authentication, provider)
-    .then((re)=> {
-      console.log(re);
-    })
-    .catch((err)=> {
-      console.log(err);
-    })
-    
   }
 
   return (
