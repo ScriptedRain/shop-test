@@ -11,7 +11,7 @@ const Footer = () => {
               href='/'
               class='text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300'
             >
-              U Bay
+              BKSA
             </a>
 
             <p class='max-w-md mx-auto mt-2 text-gray-500 dark:text-gray-400'>
