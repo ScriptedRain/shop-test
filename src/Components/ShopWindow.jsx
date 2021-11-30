@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
 
-
 const ShopWindow = ({ name, desc, price, img }) => {
   const [users, setUsers] = useState([])
   const usersCollectionRef = collection(db, 'testUsers')
@@ -40,13 +39,13 @@ const ShopWindow = ({ name, desc, price, img }) => {
               </svg>
             </div>
             <div class='absolute z-10 flex-col items-start hidden w-full pb-1 bg-white shadow-lg rounded group-focus:flex'>
-              <a class='w-full px-4 py-2 text-left hover:bg-gray-200' href='#'>
+              {/* <a class='w-full px-4 py-2 text-left hover:bg-gray-200' href='/'>
                 Popular
               </a>
               <a class='w-full px-4 py-2 text-left hover:bg-gray-200' href='#'>
                 Featured
               </a>
-              <a class='w-full px-4 py-2 text-left hover:bg-gray-200' href='#'>
+              <a class='w-full px-4 py-# text-left hover:bg-gray-200' href='#'>
                 Newest
               </a>
               <a class='w-full px-4 py-2 text-left hover:bg-gray-200' href='#'>
@@ -54,7 +53,7 @@ const ShopWindow = ({ name, desc, price, img }) => {
               </a>
               <a class='w-full px-4 py-2 text-left hover:bg-gray-200' href='#'>
                 Highest Price
-              </a>
+              </a> */}
             </div>
           </button>
         </div>
@@ -72,7 +71,10 @@ const ShopWindow = ({ name, desc, price, img }) => {
               </div>
             )
           })}
-          <Card name='Create New Card' img='https://seekicon.com/free-icon-download/plus-square_2.svg'/>
+          <Card
+            name='Create New Card'
+            img='https://seekicon.com/free-icon-download/plus-square_2.svg'
+          />
         </div>
       </body>
     </div>

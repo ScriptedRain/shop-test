@@ -1,9 +1,10 @@
-import Link from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
 
+// eslint-disable-next-line
 const Card = ({ name, desc, tags, price, img }) => {
+  // eslint-disable-next-line
   const [users, setUsers] = useState([])
   const usersCollectionRef = collection(db, 'testUsers')
 
@@ -30,10 +31,10 @@ const Card = ({ name, desc, tags, price, img }) => {
       </a>
       <div class='flex items-center justify-between mt-3'>
         <div>
-          <a href='#' class='font-medium'>
+          <a href='/' class='font-medium'>
             {name ? name : '$name'}
           </a>
-          <a class='flex items-center' href='#'>
+          <a class='flex items-center' href='/'>
             <span class='text-xs font-medium text-gray-600'>by</span>
             <span class='text-xs font-medium ml-1 text-indigo-500'>
               {tags ? tags : '$tags'}
