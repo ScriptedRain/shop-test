@@ -28,7 +28,7 @@ const Navbar = ({ currentPageShop }) => {
               alt='Shooting Stars'
               className=' transform scale-75 ml-4'
             />
-            <h1 className='text-gray-200 font-mono font-bold antialiased text-2xl hidden lg:block h-8 w-auto ml-3 mb-1'>
+            <h1 className='text-gray-200 font-mono font-extrabold antialiased text-2xl hidden lg:block h-8 w-auto ml-3 mb-1'>
               BKSA
             </h1>
           </a>
