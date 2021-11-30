@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar'
 import { db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import Card from '../Components/Card'
+
 const Home = () => {
   const [users, setUsers] = useState([])
   const usersCollectionRef = collection(db, 'testUsers')

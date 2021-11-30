@@ -1,7 +1,18 @@
 import { Button1, Button2 } from "./Buttons";
 import { Link } from "react-router-dom";
+import { authentication } from '../Firebase'
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 const Navbar = ({ currentPageShop }) => {
+
+  const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider()
+    signInWithPopup(authentication, provider)
+    .catch((err) => {
+      'null'
+    })
+  }
+
   return (
     <div className="">
       <div className="grid grid-cols-12 gap-4 pt-4 row-span-2 grid-rows-1 pb-3 bg-gray-800">
@@ -34,9 +45,7 @@ const Navbar = ({ currentPageShop }) => {
           </div>
         </div>
         <div className="col-start-10 col-span-1">
-          <Link to="/Login">
-            <Button1 name="Login / Signup" />
-          </Link>
+            <button onClick={signInWithGoogle} className='whitespace-nowrap ml-36 px-4 py-2 font-medium tracking-wide text-white transition-colors duration-200 bg-indigo-700 rounded-md hover:bg-indigo-500 hover:scale-105 hover: focus:ring-indigo-300 focus:ring-opacity-80'>Sign in with Google</button>
         </div>
       </div>
     </div>

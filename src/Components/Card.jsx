@@ -1,16 +1,26 @@
-const Card = ({ name, desc, price, img }) => {
-  return (
-    <div>
-      <div class='max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800'>
-        <div class='px-4 py-2'>
-          <h1 class='text-3xl font-bold text-gray-800 uppercase dark:text-white'>
-            {name}
-          </h1>
-          <p class='mt-1 text-sm text-gray-600 dark:text-gray-400'>{desc}</p>
-        </div>
+import { useState, useEffect } from 'react'
+import { db } from '../Firebase'
+import { collection, getDocs } from 'firebase/firestore'
 
+// eslint-disable-next-line
+const Card = ({ name, desc, tags, price, img }) => {
+  // eslint-disable-next-line
+  const [users, setUsers] = useState([])
+  const usersCollectionRef = collection(db, 'testUsers')
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(usersCollectionRef)
+      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+    }
+    getUsers()
+  }, [usersCollectionRef])
+
+  return (
+    <div className=''>
+      <a exact href='/'>
         <img
-          class='object-cover w-full h-48 mt-2'
+          class='block h-64 rounded-lg shadow-lg'
           src={
             img
               ? img
@@ -18,13 +28,24 @@ const Card = ({ name, desc, price, img }) => {
           }
           alt='NIKE AIR'
         ></img>
-
-        <div class='flex items-center justify-between px-4 py-2 bg-gray-900'>
-          <h1 class='text-lg font-bold text-white'>{'$' + price}</h1>
-          <button class='px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none'>
-            Add to cart
-          </button>
+      </a>
+      <div class='flex items-center justify-between mt-3'>
+        <div>
+          <a href='/' class='font-medium'>
+            {name ? name : '$name'}
+          </a>
+          <a class='flex items-center' href='/'>
+            <span class='text-xs font-medium text-gray-600'>by</span>
+            <span class='text-xs font-medium ml-1 text-indigo-500'>
+              {tags ? tags : '$tags'}
+            </span>
+          </a>
         </div>
+        {price ? (
+          <span class='flex items-center h-8 bg-indigo-200 text-indigo-600 text-sm px-2 rounded'>
+            {price ? price : '$price'}
+          </span>
+        ) : null}
       </div>
     </div>
   )
