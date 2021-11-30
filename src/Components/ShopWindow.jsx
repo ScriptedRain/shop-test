@@ -22,7 +22,7 @@ const ShopWindow = ({ name, desc, price, img }) => {
       <body class='flex flex-col w-screen min-h-screen p-10 bg-gray-100 text-gray-800'>
         <h1 class='text-3xl'>Product Category Page Title</h1>
         <div class='flex flex-col sm:flex-row sm:items-end sm:justify-between mt-6'>
-          <span class='text-sm font-semibold'>1-16 of 148 Products</span>
+          <span class='text-sm font-semibold'>1-16 of 148 Products</span>s
           <button class='relative text-sm focus:outline-none group mt-4 sm:mt-0'>
             <div class='flex items-center justify-between w-40 h-10 px-3 border-2 border-gray-300 rounded hover:bg-gray-300'>
               <span class='font-medium'>Popular</span>
