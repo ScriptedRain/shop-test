@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     <div>
@@ -16,16 +16,18 @@ const Hero = () => {
                   Porro beatae error laborum ab amet sunt recusandae? Reiciendis
                   natus perspiciatis optio.
                 </p>
-                <button class='w-full px-3 py-2 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-indigo-600 rounded-md lg:w-auto hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500'>
-                  Shop Now
-                </button>
+                <Link to='/shop'>
+                  <button class='px-4 py-2 mt-8 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md hover:bg-indigo-700 hover:scale-105 focus:ring-indigo-300 focus:ring-opacity-80'>
+                    Shop Now
+                  </button>
+                </Link>
               </div>
             </div>
 
             <div class='flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2'>
               <img
                 class='w-full h-full lg:max-w-2xl'
-                src='../Components/Imgs/undraw_web_shopping_re_owap.svg'
+                src='https://firebasestorage.googleapis.com/v0/b/shop-app-26778.appspot.com/o/Images%2Fundraw_web_shopping_re_owap.svg?alt=media&token=64ae3ce7-a768-412f-99b2-1100439eb71f'
                 alt='Catalogue-pana.svg'
               ></img>
             </div>

@@ -4,6 +4,7 @@ import { db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
 // import Card from '../Components/Card'
 import Hero from '../Components/Hero'
+import Footer from '../Components/Footer'
 
 const Home = () => {
   // eslint-disable-next-line
@@ -22,6 +23,7 @@ const Home = () => {
     <div>
       <Navbar />
       <Hero />
+      <Footer />
     </div>
   )
 }
