@@ -26,7 +26,7 @@ const Navbar = ({ currentPageShop }) => {
               className=' transform scale-75 ml-4'
             />
             <h1 className='text-gray-200 font-mono font-extrabold antialiased text-2xl hidden lg:block h-8 w-auto ml-3 mb-1'>
-              u-bay
+              BKSA
             </h1>
           </a>
         </div>
